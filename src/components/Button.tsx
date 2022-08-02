@@ -8,7 +8,7 @@ type ButtonPropsType = {
   children?: JSX.Element; // 子要素
 };
 
-const MyButton = React.memo((props: ButtonPropsType): JSX.Element => {
+const MyButton: React.FC<ButtonPropsType> = (props) => {
   const ButtonStyle = styled(Button)(({ theme }) => ({
     margin: theme.spacing(1),
     backgroundColor: props.backgroundColor,
@@ -20,5 +20,5 @@ const MyButton = React.memo((props: ButtonPropsType): JSX.Element => {
       <ButtonStyle onClick={props.onClick}>{props.children}</ButtonStyle>
     </div>
   );
-});
-export default MyButton;
+};
+export default React.memo(MyButton);

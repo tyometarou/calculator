@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 type DisplayPropsType = {
-  display?: string;
+  display: string;
   operator: string;
 };
 
@@ -13,7 +13,11 @@ const Wrap = styled(Box)(({ theme }) => ({
   margin: '0 auto',
 }));
 
-const Display = React.memo((props: DisplayPropsType): JSX.Element => {
+const OperatorWrap = styled(Box)(({ theme }) => ({
+  fontSize: '60px',
+}));
+
+const Display: React.FC<DisplayPropsType> = (props) => {
   let disp_operator = props.operator;
 
   switch (disp_operator) {
@@ -36,9 +40,9 @@ const Display = React.memo((props: DisplayPropsType): JSX.Element => {
   //-- Render --------------------------------------------------------
   return (
     <Box display="flex">
-      {props.display && <Wrap>{props.display}</Wrap>}
-      {props.operator && <div>{disp_operator}</div>}
+      {props.display && <Wrap data-testid="display">{props.display}</Wrap>}
+      {props.operator && <OperatorWrap>{disp_operator}</OperatorWrap>}
     </Box>
   );
-});
-export default Display;
+};
+export default React.memo(Display);
