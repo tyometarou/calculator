@@ -2,6 +2,7 @@
   "name": "caluclator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tyometarou.github.io/calculator/",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -14,6 +15,7 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@wcj/dark-mode": "^1.0.14",
+    "gh-pages": "^5.0.0",
     "lodash": "^4.17.21",
     "micromatch": "^4.0.5",
     "path": "^0.12.7",
@@ -28,6 +30,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
