@@ -1,10 +1,18 @@
-# Getting Started with Create React App
+# 電卓機能
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+電卓機能を実装しました。基本的な電卓の機能のみ搭載されています。
 
-## Available Scripts
+## 使用技術
 
-In the project directory, you can run:
+[create-react-app](https://create-react-app.dev/)
+
+[MUI](https://mui.com/)
+
+[jest](https://jestjs.io/ja/)
+
+[TestingLibrary](https://testing-library.com/docs/react-testing-library/intro/)
+
+## 実行コマンド
 
 ### `npm start`
 
@@ -19,28 +27,20 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 技術選定理由
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+① 　[create-react-app](https://create-react-app.dev/)
+　特に NextJs でやる動機もなかった。（SEO とか SSR をする気もなかった。）
+公式で create-react-app が消えていたので
+[vite](https://ja.vitejs.dev/)に変えるのはアリかもしれないです。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+② 　[MUI](https://mui.com/)　
+触ったことがなかったので使ってみました。CSS フレームワークは一通り触ってみましたが、合意が取れて、デザイナーと正しく協議ができて、パフォーマンスに大きく影響がでなければ何でもいいやという心境です。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+③ 　[jest](https://jestjs.io/ja/)
 
-### `npm run eject`
+他に選択肢がなかったです。
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+④ 　[TestingLibrary](https://testing-library.com/docs/react-testing-library/intro/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+他に選択肢がなかったです。
