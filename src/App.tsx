@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        aa <Calculator />
+        <Calculator />
       </div>
     </div>
   );
