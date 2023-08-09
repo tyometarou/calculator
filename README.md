@@ -1,6 +1,11 @@
 # 電卓機能
 
 電卓機能を実装しました。基本的な電卓の機能のみ搭載されています。
+[GitHub Actions](https://docs.github.com/ja/actions) で自動デプロイは実装済みです。
+
+今回実装した[電卓](https://tyometarou.github.io/calculator/)
+
+![電卓の画像](./docs//calculator.png)
 
 ## 使用技術
 
