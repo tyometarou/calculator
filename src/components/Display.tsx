@@ -1,6 +1,6 @@
-import React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
+import React, { FC } from "react";
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 
 type DisplayPropsType = {
   display: string;
@@ -8,40 +8,29 @@ type DisplayPropsType = {
 };
 
 const Wrap = styled(Box)(({ theme }) => ({
-  fontSize: '60px',
-  width: '100%',
-  margin: '0 auto',
+  fontSize: "60px",
+  width: "100%",
+  margin: "0 auto",
 }));
 
 const OperatorWrap = styled(Box)(({ theme }) => ({
-  fontSize: '60px',
+  fontSize: "60px",
 }));
 
-const Display: React.FC<DisplayPropsType> = (props) => {
-  let disp_operator = props.operator;
+const Display: FC<DisplayPropsType> = ({ display, operator }) => {
+  const operatorMapping = {
+    add: "+",
+    subtract: "-",
+    multiply: "×",
+    divide: "÷",
+  };
 
-  switch (disp_operator) {
-    case 'add':
-      disp_operator = '+';
-      break;
-    case 'subtract':
-      disp_operator = '-';
-      break;
-    case 'multiply':
-      disp_operator = '×';
-      break;
-    case 'divide':
-      disp_operator = '÷';
-      break;
-    default:
-      disp_operator = '';
-  }
-
-  //-- Render --------------------------------------------------------
   return (
     <Box display="flex">
-      {props.display && <Wrap data-testid="display">{props.display}</Wrap>}
-      {props.operator && <OperatorWrap>{disp_operator}</OperatorWrap>}
+      {display && <Wrap data-testid="display">{display}</Wrap>}
+      {operator && (
+        <OperatorWrap>{operatorMapping[operator] || ""}</OperatorWrap>
+      )}
     </Box>
   );
 };
